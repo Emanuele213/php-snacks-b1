@@ -62,15 +62,16 @@ punti fatti dalla squadra ospite. Stampiamo a schermo tutte le partite con quest
 <body>
     <h1>Toneo di basket</h1>
     <ul>
-        <?php 
-            for ($i = 0; $i < count($arrSquadScore); $i++) {
+        <?php
+            $arr_match_length = count($arrSquadScore);
+            for ($i = 0; $i < $arr_match_length; $i++) {
                 $squad = $arrSquadScore[$i];
                 $home = $squad['home'];
                 //ucfirst: restituisce una stringa con il primo carattere stringmaiuscolo
-                $homeName = ucfirst($home['name']);
+                $homeName = ($home['name']);
                 $homeScore = $home['score'];
                 $away = $squad['away'];
-                $nameAway = ucfirst($away['name']);
+                $nameAway = ($away['name']);
                 $scoreAway = $away['score'];
                 echo "<li>$homeName - $nameAway | $homeScore - $scoreAway</li>";
             }

@@ -18,7 +18,7 @@ chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito�
         if (strlen($name) > 3 && $checkEmail && is_numeric($age)) {
             $message = "Accesso consentito";
         } else {
-            $message = "Le credenziali possono essere sbagliate";
+            $message = "Accesso negato";
         }
     } else {
         $message = "Inserisci le credenziali";
